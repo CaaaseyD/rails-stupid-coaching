@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsStupidCoaching</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <h1 class="text-center p-5">Rails Stupid Coaching</h1>
+    <div class="d-flex justify-content-center">
+     <ul>
+        <li class="list-group-item list-group-item-dark"><%= @question %></li>
+        <li class="list-group-item"><%= @answer %></li>
+      </ul>
+    </div>
+    <div class="text-center p-1">
+    <a href="/ask" class="text-center btn btn-success" method="post">Ask a new question</a>
+    </div>
+    <%= yield %>
+  </body>
+</html>
